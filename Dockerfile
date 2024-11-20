@@ -10,7 +10,7 @@ RUN apk add --no-cache bash openjdk21-jre \
 && apk add --no-cache curl git openssh unzip wget zip \
 # Installing Jenkins agent
 && mkdir -p /usr/share/jenkins \
-    && chmod -R 755 /usr/share/jenkins
+&& chmod -R 755 /usr/share/jenkins
 ARG AGENT_JAR_URL=https://default-url.com/jnlpJars/agent.jar
 ENV AGENT_JAR_URL=$AGENT_JAR_URL
 ADD $AGENT_JAR_URL /usr/share/jenkins/agent.jar
